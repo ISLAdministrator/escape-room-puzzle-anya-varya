@@ -9,23 +9,33 @@ DO NOT let AI code for you!!
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Escape Room</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <h1>Escape Room</h1>
+  <div id="start-screen" class="screen">
+    <img src="Images/start.png" class="full-bg">
 
-  <p>
-    Write the story of your escape room here.
-  </p>
+    <div class="story-overlay">
+      <h1>The Silent Auditorium</h1>
+      <p>
+        The system needs your help. To bring this space back to normal,
+        you must solve a puzzle that correctly orders the lights,
+        sound, and screen cues.
+      </p>
+      <img src="Images/arrow.png" id="start-arrow" onclick="startGame()">
+    </div>
+  </div>
 
-  <button id="button">Click me</button>
-
-  <p id="output"></p>
+  <div id="game-screen" class="screen hidden">
+    <img src="Images/The game.png" class="full-bg">
+  </div>
 
   <script src="script.js"></script>
-</body>
+  </body>
 </html>
