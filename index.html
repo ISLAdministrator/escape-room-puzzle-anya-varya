@@ -17,27 +17,30 @@ DO NOT let AI code for you!!
 </head>
 
 <body>
-
- <div id="game-screen" class="screen">
+  <div id="start-screen" class="screen">
     <img src="Images/start.png" class="full-bg">
-
     <div class="story-overlay">
       <h1>The Silent Auditorium</h1>
-      <p>
-        The system needs your help. To bring this space back to normal,
+      <p>The system needs your help. To bring this space back to normal,
         you must solve a puzzle that correctly orders the lights,
-        sound, and screen cues.
-      </p>
+        sound, and screen cues</p>
       <img src="Images/arrow.png" id="start-arrow" onclick="startGame()">
     </div>
   </div>
-<!--
-  <div id="game-screen" class="screen">
-    <img src="Images/The game.png" class="full-bg"> 
-   </div>
--->
-  
+
+<div id="game-screen" class="screen hidden">
+    <img src="Images/The game.png" class="full-bg">
+
+    <div id="hit-bulb" class="hitbox" onclick="found('bulb')"></div>
+    <div id="hit-wire" class="hitbox" onclick="found('wire')"></div>
+    <div id="hit-monitor" class="hitbox" onclick="found('monitor')"></div>
+    <div id="hit-axe" class="hitbox" onclick="found('axe')"></div>
+    <div id="hit-flashlight" class="hitbox" onclick="found('flashlight')"></div>
+    <div id="hit-speaker" class="hitbox" onclick="found('speaker')"></div>
+    <div id="hit-scissors" class="hitbox" onclick="found('scissors')"></div>
+    <div id="hit-rope" class="hitbox" onclick="found('rope')"></div>
+</div>
 
   <script src="script.js"></script>
-  </body>
+</body>
 </html>

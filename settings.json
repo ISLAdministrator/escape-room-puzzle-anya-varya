@@ -1,10 +1,7 @@
 {
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
-  "livePreview.defaultPreviewPath": "/index.html"
-}
-
-{
+  "livePreview.defaultPreviewPath": "/index.html",
   "recommendations": [
     "ms-vscode.live-preview"
   ]
