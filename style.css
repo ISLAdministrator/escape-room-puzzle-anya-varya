@@ -67,14 +67,14 @@
 }
 
 /* Initial positions - we will move these next! */
-#hit-bulb       { top: 10%; left: 10%; }
-#hit-wire       { top: 20%; left: 20%; }
-#hit-monitor    { top: 30%; left: 30%; width: 100px; height: 80px; }
-#hit-axe        { top: 40%; left: 40%; }
-#hit-flashlight { top: 50%; left: 50%; }
-#hit-speaker    { top: 60%; left: 60%; }
-#hit-scissors   { top: 70%; left: 70%; }
-#hit-rope       { top: 80%; left: 80%; }
+#hit-bulb       { top: 52%; left: 60%; width: 50px; height: 40px; }
+#hit-wire       { top: 80%; left: 10%; width: 50px; height: 40px; }
+#hit-monitor    { top: 67%; left: 21%; width: 50px; height: 40px; }
+#hit-axe        { top: 45%; left: 23%; width: 50px; height: 40px; }
+#hit-flashlight { top: 52%; left: 6%; width: 50px; height: 40px; }
+#hit-speaker    { top: 77%; left: 36%; width: 50px; height: 40px; }
+#hit-scissors   { top: 58%; left: 68%; width: 50px; height: 40px; }
+#hit-rope       { top: 66%; left: 5%; width: 50px; height: 40px; }
 
 #game-screen {
     position: relative;
