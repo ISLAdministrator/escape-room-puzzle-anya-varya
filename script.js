@@ -35,3 +35,17 @@ function startGame() {
     // Optional: Log it in the console to make sure it works
     console.log("The search begins!");
 }
+function found(itemName) {
+    // 1. Find the checkmark image and show it with the animation
+    const checkmark = document.getElementById('check-' + itemName);
+    if (checkmark) {
+        checkmark.classList.remove('hidden');
+        checkmark.classList.add('checkmark-animated');
+    }
+
+    // 2. Make the hitbox unclickable so you don't find it twice
+    const hitbox = document.getElementById('hit-' + itemName);
+    if (hitbox) {
+        hitbox.style.pointerEvents = 'none';
+    }
+}
