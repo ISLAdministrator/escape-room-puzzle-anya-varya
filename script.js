@@ -1,3 +1,42 @@
+let totalClicked = 0; 
+
+function found(itemName) {
+    // This alert helps us test if the click is even working
+    console.log("System detected click on: " + itemName);
+
+    const checkmark = document.getElementById('check-' + itemName);
+    const hitbox = document.getElementById('hit-' + itemName);
+
+    if (checkmark && checkmark.classList.contains('hidden')) {
+        checkmark.classList.remove('hidden');
+        checkmark.classList.add('checkmark-animated');
+        
+        if (hitbox) {
+            hitbox.style.pointerEvents = 'none';
+        }
+
+        totalClicked = totalClicked + 1;
+        console.log("Score: " + totalClicked + "/8");
+
+        if (totalClicked === 8) {
+            finishGame();
+        }
+    }
+}
+
+function finishGame() {
+    const gameArea = document.getElementById('game-screen');
+    const endArea = document.getElementById('end-screen');
+
+    if (gameArea && endArea) {
+        gameArea.style.display = 'none'; // Force hide
+        endArea.style.display = 'block'; // Force show
+        endArea.classList.remove('hidden');
+    } else {
+        alert("Error: Could not find the screen IDs. Check your HTML!");
+    }
+}
+
 console.log("Script loaded");
 
 // below is basic example code for using a button
