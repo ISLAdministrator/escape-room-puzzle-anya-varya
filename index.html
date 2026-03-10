@@ -11,9 +11,9 @@ DO NOT let AI code for you!!
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Escape Room</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Escape Room</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@ DO NOT let AI code for you!!
         <img src="Images/start.png" class="full-bg">
         <div class="story-overlay">
             <h1>The Silent Auditorium</h1>
-            <p>The system needs your help...</p>
+            <p>The system needs your help. To bring this space back to normal, you must solve a puzzle that correctly orders the lights, sound, and screen cues. Find and select all the items listed... Good luck! ;) </p>
             <img src="Images/arrow.png" id="start-arrow" onclick="startGame()">
         </div>
     </div>
@@ -53,6 +53,9 @@ DO NOT let AI code for you!!
     </div>
 
     <script src="script.js"></script>
+    <audio id="found-sound" src="Images/success.mp3" preload="auto"></audio>
+    <audio id="glitch-sound" src="Images/glitch.mp3" loop preload="auto" muted></audio>
+    <audio id="victory-sound" src="Images/victory.mp3" preload="auto"></audio>
 </body>
 
 </html>
