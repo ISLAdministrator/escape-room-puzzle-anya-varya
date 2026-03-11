@@ -1,17 +1,190 @@
-/*
-This is a CSS comment :) Text just for humans, it is not part of the code
-Below is basic CSS styling.
-You can change it, add to it, or delete it.
-*/
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #111;
-  color: white;
-  padding: 20px;
+/* Add this to the very top of your style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-button {
-  padding: 10px;
-  font-size: 16px;
+body {
+    background-color: black; /* This removes the white background */
+    overflow: hidden;        /* This prevents scrolling bars from appearing */
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Make sure the screens stack on top of each other */
+.screen {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.full-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.story-overlay {
+    position: relative;
+    z-index: 2;
+    /* This puts the text ON TOP of the image */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black box so text is readable */
+    max-width: 600px;
+    margin: 100px auto;
+}
+
+#start-arrow {
+    width: 80px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.story-overlay h1 {
+    margin-top: -120px;
+    /* This pushes the title up without breaking the layout */
+    margin-bottom: 80px;
+    /* This adds space between the title and the paragraph */
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+
+#start-arrow {
+    width: 80px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.hitbox {
+    position: absolute;
+    display: block;
+    background-color: transparent; /* Makes the fill invisible */
+    border: none;                  /* Removes the red lines */
+    z-index: 100;
+    cursor: pointer;
+}
+
+
+/* Initial positions - we will move these next! */
+#hit-bulb       { top: 52%; left: 60%; width: 50px; height: 40px; }
+#hit-wire       { top: 80%; left: 10%; width: 50px; height: 40px; }
+#hit-monitor    { top: 67%; left: 21%; width: 50px; height: 40px; }
+#hit-axe        { top: 45%; left: 23%; width: 50px; height: 40px; }
+#hit-flashlight { top: 52%; left: 6%; width: 50px; height: 40px; }
+#hit-speaker    { top: 77%; left: 36%; width: 50px; height: 40px; }
+#hit-scissors   { top: 58%; left: 68%; width: 50px; height: 40px; }
+#hit-rope       { top: 66%; left: 5%; width: 50px; height: 40px; }
+
+#game-screen {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.checkmark {
+    width: 25px; 
+    height: auto;
+    margin-left: 10px;
+}
+
+.check-sticker {
+    position: absolute;
+    width: 145px; 
+    height: auto;
+    z-index: 105; /* Keeps them above everything else */
+    pointer-events: none; /* Prevents the image from blocking clicks */
+}
+
+/* Animations */
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    80% { transform: scale(1.3); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.checkmark-animated {
+    display: block !important;
+    animation: popIn 0.4s ease-out forwards;
+}
+
+/* START POSITIONING HERE: Move these to match your background list */
+#check-bulb { 
+    top: 8%; 
+    left: 81%; 
+}
+
+#check-wire { 
+    top: 15%; 
+    left: 92%; 
+}
+
+#check-monitor { 
+    top: 28%; 
+    left: 82%; 
+}
+
+#check-axe { 
+    top: 41%; 
+    left: 92%; 
+}
+
+#check-flashlight { 
+    top: 48%; 
+    left: 82%; 
+}
+
+#check-speaker { 
+    top: 65%; 
+    left: 85%; 
+}
+
+#check-scissors { 
+    top: 84%; 
+    left: 84%; 
+}
+
+#check-rope { 
+    top: 77%; 
+    left: 93%; 
+}
+
+
+
+
+.hidden {
+    display: none !important;
+}
+
+.screen {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.full-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.next-room-arrow {
+    position: absolute;
+    bottom: 0%;         
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;      
+    height: 40px;     
+    background-color: transparent; 
+    cursor: pointer;
+    z-index: 1000;      
 }

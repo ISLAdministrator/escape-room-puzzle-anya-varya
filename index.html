@@ -9,23 +9,55 @@ DO NOT let AI code for you!!
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Escape Room</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Escape Room</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div id="start-screen" class="screen">
+        <img src="Images/start.png" class="full-bg">
+        <div class="story-overlay">
+            <h1>The Silent Auditorium</h1>
+            <p>The system needs your help. To bring this space back to normal, you must solve a puzzle that correctly orders the lights, sound, and screen cues. Find and select all the items listed... Good luck! ;) </p>
+            <img src="Images/arrow.png" id="start-arrow" onclick="startGame()">
+        </div>
+    </div>
 
-  <h1>Escape Room</h1>
+    <div id="game-screen" class="screen hidden">
+        <img src="Images/The game.png" class="full-bg">
 
-  <p>
-    Write the story of your escape room here.
-  </p>
+        <div id="hit-bulb" class="hitbox" onclick="found('bulb')"></div>
+        <div id="hit-wire" class="hitbox" onclick="found('wire')"></div>
+        <div id="hit-monitor" class="hitbox" onclick="found('monitor')"></div>
+        <div id="hit-axe" class="hitbox" onclick="found('axe')"></div>
+        <div id="hit-flashlight" class="hitbox" onclick="found('flashlight')"></div>
+        <div id="hit-speaker" class="hitbox" onclick="found('speaker')"></div>
+        <div id="hit-scissors" class="hitbox" onclick="found('scissors')"></div>
+        <div id="hit-rope" class="hitbox" onclick="found('rope')"></div>
 
-  <button id="button">Click me</button>
+        <img src="Images/checkmark.png" id="check-bulb" class="check-sticker hidden">
+        <img src="Images/checkmark.png" id="check-wire" class="check-sticker hidden">
+        <img src="Images/checkmark.png" id="check-monitor" class="check-sticker hidden">
+        <img src="Images/checkmark.png" id="check-axe" class="check-sticker hidden">
+        <img src="Images/checkmark.png" id="check-flashlight" class="check-sticker hidden">
+        <img src="Images/checkmark.png" id="check-speaker" class="check-sticker hidden">
+        <img src="Images/checkmark.png" id="check-scissors" class="check-sticker hidden">
+        <img src="Images/checkmark.png" id="check-rope" class="check-sticker hidden">
+    </div>
 
-  <p id="output"></p>
-
-  <script src="script.js"></script>
+   
+    <script src="script.js"></script>
+    <audio id="found-sound" src="Images/success.mp3" preload="auto"></audio>
+    <audio id="glitch-sound" src="Images/glitch.mp3" loop preload="auto" muted></audio>
+    <audio id="victory-sound" src="Images/victory.mp3" preload="auto"></audio>
+  <div id="end-screen" class="screen hidden" style="display:none;">
+    <img src="Images/theendscreen.png" class="full-bg">
+    
+    <a href="https://isladministrator.github.io/escape-room-puzzle-alihan-alex/" class="next-room-arrow"></a>
+</div>
 </body>
+
 </html>
