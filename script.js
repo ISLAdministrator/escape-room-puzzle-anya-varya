@@ -1,11 +1,10 @@
 let totalClicked = 0;
 
-// 1. START THE GLITCH (Runs when player clicks anywhere)
 window.addEventListener('click', function() {
     const glitch = document.getElementById('glitch-sound');
     const startScreen = document.getElementById('start-screen');
     
-    // Only play if the start screen is still visible
+   
     if (startScreen && !startScreen.classList.contains('hidden')) {
         if (glitch) {
             glitch.play().catch(e => console.log("Sound waiting for interaction"));
@@ -13,7 +12,6 @@ window.addEventListener('click', function() {
     }
 }, { once: true });
 
-// 2. START THE GAME (Stops glitch, swaps screens)
 function startGame() {
     const startScreen = document.getElementById('start-screen');
     const gameScreen = document.getElementById('game-screen');
@@ -29,7 +27,7 @@ function startGame() {
     }
 }
 
-// 3. FIND ITEMS (Plays "ding" sound, updates score)
+
 function found(itemName) {
     const checkmark = document.getElementById('check-' + itemName);
     const hitbox = document.getElementById('hit-' + itemName);
@@ -66,23 +64,21 @@ function finishGame() {
         endArea.style.display = 'block'; //
         endArea.classList.remove('hidden'); //
 
-        // Play the victory sound
+        
         if (victorySound) {
             victorySound.play();
         }
     }
 }
-// Add this at the very bottom of your script.js
+
 window.addEventListener('click', function() {
     const glitch = document.getElementById('glitch-sound');
     const startScreen = document.getElementById('start-screen');
     
-    // Check if we are still on the start screen
     if (startScreen && !startScreen.classList.contains('hidden')) {
         if (glitch) {
-            glitch.muted = false; // Unmute it instantly
+            glitch.muted = false; 
             glitch.play();
-            // This forces the sound to jump to the start with 0 delay
             glitch.currentTime = 0; 
             console.log("Glitch sound forced start.");
         }

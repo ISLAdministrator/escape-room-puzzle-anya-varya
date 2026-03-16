@@ -1,16 +1,8 @@
-<!--This is an HTML Comment, text just for humans :) It is not part of your code.
-Good coders use comments frequently to stay organized and communicate with collaborators.
-
-The code below is basic HTML for your puzzle.
-You can edit it, add to it, and delete parts of it.
-
-DO NOT let AI code for you!!
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
     <title>Escape Room</title>
     <link rel="stylesheet" href="style.css">
@@ -21,7 +13,8 @@ DO NOT let AI code for you!!
         <img src="Images/start.png" class="full-bg">
         <div class="story-overlay">
             <h1>The Silent Auditorium</h1>
-            <p>The system needs your help. To bring this space back to normal, you must solve a puzzle that correctly orders the lights, sound, and screen cues. Find and select all the items listed... Good luck! ;) </p>
+            <p>The system needs your help. To bring this space back to normal, you must solve a puzzle that correctly
+                orders the lights, sound, and screen cues. Find and select all the items listed... Good luck! ;) </p>
             <img src="Images/arrow.png" id="start-arrow" onclick="startGame()">
         </div>
     </div>
@@ -48,16 +41,16 @@ DO NOT let AI code for you!!
         <img src="Images/checkmark.png" id="check-rope" class="check-sticker hidden">
     </div>
 
-   
+
     <script src="script.js"></script>
     <audio id="found-sound" src="Images/success.mp3" preload="auto"></audio>
     <audio id="glitch-sound" src="Images/glitch.mp3" loop preload="auto" muted></audio>
     <audio id="victory-sound" src="Images/victory.mp3" preload="auto"></audio>
-  <div id="end-screen" class="screen hidden" style="display:none;">
-    <img src="Images/theendscreen.png" class="full-bg">
-    
-    <a href="https://isladministrator.github.io/escape-room-puzzle-alihan-alex/" class="next-room-arrow"></a>
-</div>
+    <div id="end-screen" class="screen hidden" style="display:none;">
+        <img src="Images/theendscreen.png" class="full-bg">
+
+        <a href="https://isladministrator.github.io/escape-room-puzzle-alihan-alex/" class="next-room-arrow"></a>
+    </div>
 </body>
 
 </html>
