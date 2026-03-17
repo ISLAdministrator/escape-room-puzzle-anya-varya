@@ -85,7 +85,7 @@ body {
     width: 5%; 
     height: 8%;
     /* Highlighted for setup - change to transparent when finished! */
-    background-color: rgba(0, 255, 0, 0.3); 
+    background-color: transparent;
 }
 
 /* Positions are now relative to the IMAGE. 
