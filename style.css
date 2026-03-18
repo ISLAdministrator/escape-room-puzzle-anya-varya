@@ -72,7 +72,6 @@ body {
 
 #start-arrow {
     width: 80px;
-    cursor: pointer;
     margin-top: 20px;
 }
 
@@ -80,7 +79,6 @@ body {
 .hitbox {
     position: absolute;
     z-index: 100;
-    cursor: pointer;
     /* Use percentages for size so the boxes shrink with the image */
     width: 5%; 
     height: 8%;
@@ -138,6 +136,5 @@ body {
     width: 100px;      
     height: 40px;     
     background-color: transparent; 
-    cursor: pointer;
     z-index: 1000;      
 }
